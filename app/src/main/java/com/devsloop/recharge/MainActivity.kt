@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var webView: WebView
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.new_game -> {
                 webViewProcess()
+                showMessage("Home page Loading...")
                 true
             }
             else -> super.onOptionsItemSelected(item)
@@ -44,4 +46,9 @@ class MainActivity : AppCompatActivity() {
         }
         webView.loadUrl("https://gp.portwallet.com/")
     }
+
+    fun showMessage(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+    }
+
 }
