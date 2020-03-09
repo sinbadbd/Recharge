@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
         }
-        var number = "https://gp.portwallet.com/?mobile=01734801911"
+        var number = "https://gp.portwallet.com/?mobile=01734801911&amount=10&email=imufun1@gmail.com"
         webView.loadUrl(number)
     }
 
