@@ -18,27 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
         webViewProcess()
-//        i = progressBar!!.progress
-//        Thread(Runnable {
-//
-//            while (i < 100){
-//                i += 5
-//                handler.post(Runnable {
-//                    progressBar!!.progress = i
-////                    webViewProcess()
-//                })
-//                try {
-//                    Thread.sleep(100)
-//                } catch (e: InterruptedException) {
-//                    e.printStackTrace()
-//                }
-//            }
-//        }).start()
-
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -68,7 +48,8 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
         }
-        webView.loadUrl("https://gp.portwallet.com/")
+        var number = "https://gp.portwallet.com/?mobile=01734801911"
+        webView.loadUrl(number)
     }
 
     fun showMessage(message: String) {
